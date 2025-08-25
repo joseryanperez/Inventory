@@ -1,0 +1,74 @@
+@{
+  ViewData["Title"] = "Dashboard - Analytics";
+}
+@section VendorStyles {
+<link rel="stylesheet" href="~/vendor/libs/apex-charts/apex-charts.css" />
+}
+@section VendorScripts {
+<script src="~/vendor/libs/apex-charts/apexcharts.js"></script>
+}
+@section PageScripts {
+<script src="~/js/dashboards-analytics.js"></script>
+}
+
+@* ************** Content ************** *@
+
+<div class="row">
+  <!-- Order Statistics -->
+  <div class="col-md-6 col-lg-5 col-xl-5 order-0 mb-6">
+       <div class="card">
+    <h5 class="card-header">Product With Low Inventory</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    
+                    <th>Branch</th>
+                    <th>On Hand</th>
+                    
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 1</span></td>
+                    <td>Branch 1</td>
+                    <td>1</td>
+                    
+                </tr>
+                 <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 2</span></td>
+                    <td>Branch 2</td>
+                    <td>1</td>
+
+                </tr>
+                 <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 3</span></td>
+                    <td>Branch 1</td>
+                    <td>0</td>
+
+                </tr>
+                
+
+            </tbody>
+        </table>
+    </div>
+</div>
+  </div>
+  <!--/ Order Statistics -->
+
+  <!-- Expense Overview -->
+  <
+
+  <!-- Transactions -->
+  <div class="col-md-6 col-lg-5 order-2 mb-6">
+    <div class="card h-100">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="card-title m-0 me-2">Transactions</h5>
+        
+      </div>
+      
+    </div>
+  </div>
+  <!--/ Transactions -->
+</div>

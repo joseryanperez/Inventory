@@ -1,0 +1,215 @@
+@{
+  ViewData["Title"] = "Branches";
+}
+
+@section PageScripts {
+<script src="~/js/form-basic-inputs.js"></script>
+<script src="~/js/ui-modals.js"></script>
+}
+
+@* ************** Content ************** *@
+<div class="row g-6">
+    <div class="mb-4">
+        <label for="exampleFormControlSelect1" class="form-label">Branch:</label>
+        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+            <option selected>Select Branch</option>
+            <option value="1" selected>Branch 1</option>
+            <option value="2">Branch 2</option>
+            <option value="3">Branch 3</option>
+        </select>
+    </div>
+
+</div>
+
+@{
+    ViewData["Title"] = "Vertical Form - Form Layouts";
+}
+
+@* ************** Content ************** *@
+<!-- Basic Layout -->
+
+
+<div class="card">
+    <h5 class="card-header">Branches</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>On Hand</th>
+                    <th>Date Updated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 1</span></td>
+                    <td>3</td>
+                    <td>January 1 , 2025</td>
+                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                    <td>
+                         @* <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                            <div class="dropdown-menu"> *@
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit" data-productName="Product 1"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#transfer" data-productName="Product 1"><i class="bx bx-transfer me-1"></i>Transfer</a>
+                           @*  </div>
+                        </div> *@
+                    </td>
+                </tr>
+                 <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 2</span></td>
+                    <td>3</td>
+                    <td>January 1 , 2025</td>
+                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                    <td>
+                         @* <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                            <div class="dropdown-menu"> *@
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit" data-productName="Product 2"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#transfer" data-productName="Product 2"><i class="bx bx-transfer me-1"></i>Transfer</a>
+                           @*  </div>
+                        </div> *@
+                    </td>
+                </tr>
+                 <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 3</span></td>
+                    <td>3</td>
+                    <td>January 1 , 2025</td>
+                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                    <td>
+                         @* <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                            <div class="dropdown-menu"> *@
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit" data-productName="Product 3"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#transfer" data-productName="Product 3"><i class="bx bx-transfer me-1"></i>Transfer</a>
+                           @*  </div>
+                        </div> *@
+                    </td>
+                </tr>
+                 <tr>
+                    <td><i class="bx bxl-angular bx-md text-danger me-4"></i> <span>Product 4</span></td>
+                    <td>3</td>
+                    <td>January 1 , 2025</td>
+                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                    <td>
+                         @* <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                            <div class="dropdown-menu"> *@
+                                
+                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit" data-productName ="Product 4"><i class="bx bx-edit-alt me-1" ></i>Edit</a>
+                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#transfer" data-productName ="Product 4"><i class="bx bx-transfer me-1" ></i>Transfer</a>
+                              
+                           @*  </div>
+                        </div> *@
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="transfer" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Transfer Product</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Branch
+                  <div class="row">
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                    <option selected>Select Branch</option>
+                    
+                    <option value="2" selected>Branch 2</option>
+                  <option value="3">Branch 3</option>
+                  </select>
+                    <div class="col mb-6">
+                      <label for="productName" class="form-label">Product</label>
+                      <input type="text" id="productName" name="productName" class="form-control" placeholder="Enter Name" value="productName" readonly>
+                    </div>
+                  </div>
+                   <div class="col mb-6">
+                      <label for="productQuantity" class="form-label">Quantity</label>
+                      <input type="text" id="productQuantity" class="form-control" placeholder="Enter Quantity">
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal fade" id="edit" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Edit Quantity</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                   
+                    <div class="col mb-6">
+                      <label for="productName" class="form-label">Product</label>
+                      <input type="text" id="productName" name="productName" class="form-control" placeholder="Enter Name" value="productName" readonly>
+                    </div>
+                  </div>
+                  <div class="row g-6">
+                   <div class="col mb-6">
+                      <label for="productQuantity" class="form-label">Quantity</label>
+                      <input type="text" id="productQuantity" class="form-control" placeholder="Enter Quantity">
+                    </div>
+                  </div>
+                  </div>
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col mb-6">
+                      <label for="nameBasic" class="form-label">Name</label>
+                      <input type="text" id="nameBasic" class="form-control" placeholder="Enter Name">
+                    </div>
+                  </div>
+                  <div class="row g-6">
+                    <div class="col mb-0">
+                      <label for="emailBasic" class="form-label">Email</label>
+                      <input type="email" id="emailBasic" class="form-control" placeholder="xxxx&#64;xxx.xx">
+                    </div>
+                    <div class="col mb-0">
+                      <label for="dobBasic" class="form-label">DOB</label>
+                      <input type="date" id="dobBasic" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
